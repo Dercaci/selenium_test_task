@@ -1,3 +1,4 @@
+import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -5,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from constants import FROM, TO, DEPARTURE_DATE, AP_125, SUBMIT, \
 COMFORT_TOURIST, BUY_TICKETS, ACCEPT_CONDITIONS, DROPDOWN_PASSANGER, \
 PASSANGER_NUMBER, NEXT_PAGE
-import time
+
 
 def get_element(driver, xpath):
     return WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, xpath)))
